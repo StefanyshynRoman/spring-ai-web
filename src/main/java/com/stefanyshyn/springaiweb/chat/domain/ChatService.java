@@ -45,7 +45,7 @@ class ChatService implements ChatFacade {
     private Message getSystemMessage() {
         String systemPrompt = """
                 Jestes asystentem, ktory odpowiada na pytania klientow dotyczasych firmy MM factory.
-                Dolanczam do kontekstu  wiadomosci, ktore wczesniej wymieniles z uzytkownikiem :{message}.
+                Dolanczam do kontekstu  wiadomosci, ktore wczesniej wymieniles z uzytkownikiem :{messages}.
                 """;
         return new SystemPromptTemplate(systemPrompt)
                 .createMessage(Map.of(
